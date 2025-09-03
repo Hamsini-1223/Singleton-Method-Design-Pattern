@@ -1,29 +1,30 @@
 {
-  "name": "government-singleton-pattern",
+  "name": "singleton-method-design-pattern",
   "version": "1.0.0",
-  "description": "Simple TypeScript example of Singleton Design Pattern using Government analogy",
-  "main": "main.ts",
+  "description": "A simple implementation of the Singleton Design Pattern using a Government analogy",
+  "main": "dist/main/automaticDemo.js",
   "scripts": {
-    "interactive": "npx ts-node interactiveMain.ts",
-    "demo": "npx ts-node main.ts",
-    "test": "npx ts-node simpleTest.ts",
+    "interactive": "npx ts-node src/main/interactiveMain.ts",
+    "demo": "npx ts-node src/main/automaticDemo.ts",
+    "test": "npx ts-node src/main/singletonTest.ts",
     "build": "tsc",
-    "start": "node dist/main.js"
+    "start": "node dist/main/automaticDemo.js"
   },
   "keywords": [
     "singleton",
     "design-pattern",
     "typescript",
     "government",
-    "beginner-friendly"
+    "simple"
   ],
-  "author": "Your Name",
+  "author": "Ms Hamsini S",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.19.4",
+    "typescript": "^5.0.0",
     "ts-node": "^10.9.0",
-    "typescript": "^5.0.0"
+    "@types/node": "^20.0.0"
   },
+  "dependencies": {},
   "engines": {
     "node": ">=16.0.0"
   }

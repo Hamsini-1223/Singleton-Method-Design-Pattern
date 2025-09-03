@@ -1,7 +1,7 @@
-// Government.ts
-// This is the main Government class - there can only be ONE government per country
+// src/models/government.ts
+// Simple Government Singleton class
 
-class Government {
+export class Government {
   private static theGovernment: Government;
   private countryName: string;
   private currentPresident: string;
@@ -9,9 +9,9 @@ class Government {
 
   // Private constructor - citizens can't create a new government
   private constructor(country: string) {
-    this.countryName = country;
+    this.countryName = country || "MyCountry";
     this.currentPresident = "No President Yet";
-    console.log(`🏛️ Government of ${country} established!`);
+    console.log(`Government of ${this.countryName} established!`);
   }
 
   // The ONLY way to get the government
@@ -24,13 +24,21 @@ class Government {
 
   // Government actions
   setPresident(name: string): void {
-    this.currentPresident = name;
-    console.log(`👤 ${name} is now the President`);
+    if (!name || name.trim() === "") {
+      console.log("Error: President name cannot be empty");
+      return;
+    }
+    this.currentPresident = name.trim();
+    console.log(`${this.currentPresident} is now the President`);
   }
 
   createLaw(law: string): void {
-    this.laws.push(law);
-    console.log(`📜 New law created: ${law}`);
+    if (!law || law.trim() === "") {
+      console.log("Error: Law description cannot be empty");
+      return;
+    }
+    this.laws.push(law.trim());
+    console.log(`New law created: ${law.trim()}`);
   }
 
   getInfo(): string {
@@ -38,8 +46,6 @@ class Government {
   }
 
   getAllLaws(): string[] {
-    return this.laws;
+    return [...this.laws];
   }
 }
-
-export default Government;

@@ -1,7 +1,7 @@
-// simpleTest.ts
-// Very basic test to prove Singleton works
+// src/main/singletonTest.ts
+// Simple test to prove Singleton works
 
-import Government from "./Government";
+import { Government } from "../models/government";
 
 function testSingleton(): void {
   console.log("=== TESTING SINGLETON PATTERN ===\n");

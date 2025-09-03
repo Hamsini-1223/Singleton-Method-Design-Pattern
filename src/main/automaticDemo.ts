@@ -1,10 +1,10 @@
-// main.ts
-// Simple demonstration of how everything works together
+// src/main/automaticDemo.ts
+// Simple automatic demonstration
 
-import Government from "./Government";
-import Citizen from "./Citizen";
-import Mayor from "./Mayor";
-import PoliceDepartment from "./PoliceDepartment";
+import { Government } from "../models/government";
+import { Citizen } from "../models/citizen";
+import { Mayor } from "../models/mayor";
+import { PoliceDepartment } from "../models/policeDepartment";
 
 function runSimpleDemo(): void {
   console.log("=== SIMPLE GOVERNMENT SINGLETON DEMO ===\n");
