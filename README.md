@@ -145,7 +145,3 @@ This implementation demonstrates:
 ## Built by
 
 Ms Hamsini S
-
-```
-
-```
