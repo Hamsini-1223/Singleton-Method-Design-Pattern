@@ -9,6 +9,8 @@ The Singleton pattern ensures that a class has only one instance and provides a 
 ## Project Structure
 
 ```
+├──asset/
+│   ├── Singleton_Pattern.png
 ├── src/
 │   ├── models/
 │   │   ├── government.ts
@@ -26,7 +28,7 @@ The Singleton pattern ensures that a class has only one instance and provides a 
 
 ## UML Class Diagram
 
-![Government Singleton UML Diagram](Singleton_Pattern.png)
+![Government Singleton UML Diagram](asset/Singleton_Pattern.png)
 
 ## Installation and Setup
 
